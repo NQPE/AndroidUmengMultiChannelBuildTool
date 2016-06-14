@@ -1,0 +1,2 @@
+# AndroidUmengMultiChannelBuildTool
+基于美团Android自动化之旅—生成渠道包之java版打包工具
