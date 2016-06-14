@@ -10,9 +10,11 @@
 1.AndroidManifest.xml中设置umeng渠道的那个注释掉</br>
 <img src="https://github.com/NQPE/AndroidUmengMultiChannelBuildTool/blob/master/Pics/1.png?raw=true"/></br>
 2.在你的自定义的application中用java代码设置umeng渠道号</br>
-
+<img src="https://github.com/NQPE/AndroidUmengMultiChannelBuildTool/blob/master/Pics/2.png?raw=true"/></br>
 3.编译你的项目为APK  然后使用所给的工具包 选择你的APK路径</br>
 
 其中里面的渠道号可以打包多个 比如可以输入  360;wandoujia;baidu  (以分号隔离)
 
 打好的包就是在你的APK同路径下
+<img src="https://github.com/NQPE/AndroidUmengMultiChannelBuildTool/blob/master/Pics/3.png?raw=true"/></br>
+<img src="https://github.com/NQPE/AndroidUmengMultiChannelBuildTool/blob/master/Pics/4.png?raw=true"/></br>
