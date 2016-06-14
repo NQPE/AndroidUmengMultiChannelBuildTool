@@ -16,7 +16,7 @@
 3.编译你的项目为APK  然后使用所给的工具包 选择你的APK路径</br>
 （注意这里的工具为jar文件 如果下载后双击不出现GUI界面 请单击选择打开方式 然后选择打开jar包的打开方式）</br>
 其中里面的渠道号可以打包多个 比如可以输入  360;wandoujia;baidu  (以分号隔离)
-
+（注意这里的渠道名里最好不要出现"_".否则可能出现渠道名解析错误的情况）
 打好的包就是在你的APK同路径下
 <img src="https://github.com/NQPE/AndroidUmengMultiChannelBuildTool/blob/master/Pics/4.png?raw=true"/></br>
 
