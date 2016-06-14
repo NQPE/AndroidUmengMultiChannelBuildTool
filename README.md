@@ -11,7 +11,7 @@
 1.AndroidManifest.xml中设置umeng渠道的那个注释掉</br>
 <img src="https://github.com/NQPE/AndroidUmengMultiChannelBuildTool/blob/master/Pics/1.png?raw=true"/></br>
 2.在你的自定义的application中用java代码设置umeng渠道号</br>
-<a target="_blank" href="http://tech.meituan.com/mt-apk-packaging.html">具体java代码在utils里</a> 
+<a target="_blank" href="https://github.com/NQPE/AndroidUmengMultiChannelBuildTool/Utils/getChannelCode">具体java代码在utils里</a> 
 <img src="https://github.com/NQPE/AndroidUmengMultiChannelBuildTool/blob/master/Pics/2.png?raw=true"/></br>
 3.编译你的项目为APK  然后使用所给的工具包 选择你的APK路径</br>
 （注意这里的工具为jar文件 如果下载后双击不出现GUI界面 请单击选择打开方式 然后选择打开jar包的打开方式）</br>
