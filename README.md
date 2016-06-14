@@ -16,5 +16,4 @@
 其中里面的渠道号可以打包多个 比如可以输入  360;wandoujia;baidu  (以分号隔离)
 
 打好的包就是在你的APK同路径下
-<img src="https://github.com/NQPE/AndroidUmengMultiChannelBuildTool/blob/master/Pics/3.png?raw=true"/></br>
 <img src="https://github.com/NQPE/AndroidUmengMultiChannelBuildTool/blob/master/Pics/4.png?raw=true"/></br>
