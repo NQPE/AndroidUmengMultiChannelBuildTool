@@ -1,6 +1,7 @@
 # AndroidUmengMultiChannelBuildTool
 基于美团Android自动化之旅—生成渠道包之java版打包工具</br>
-如果各位还在为打umeng的各种渠道包烦恼，那么这里推荐大家参考一下<a  target="_blank" href="http://tech.meituan.com/mt-apk-packaging.html">美团渠道打包方案</a> 
+如果各位还在为打umeng的各种渠道包烦恼，那么这里推荐大家参考一下
+<a target="_blank" href="http://tech.meituan.com/mt-apk-packaging.html">美团渠道打包方案</a> 
 
 本文是根据这个方案写的一个打包工具 因为在原文中美团给出的是用python来写打包工具 需要大家安装python环境
 
