@@ -1,0 +1,51 @@
+在你的自定义的application中用java代码设置umeng渠道号
+<code>
+//UMAnalyticsConfig(Context context, String appkey, String channelId)
+ MobclickAgent. startWithConfigure(new MobclickAgent.UMAnalyticsConfig(this, "你的umengappkey", getChannel(this)));
+
+/**
+     通过如果能直接修改apk的渠道号，而不需要再重新签名能节省不少打包的时间。
+     幸运的是我们找到了这种方法。直接解压apk，解压后的根目录会有一个META-INF目录
+     *如果在META-INF目录内添加空文件，可以不用重新签名应用。
+     * 因此，通过为不同渠道的应用添加不同的空文件，可以唯一标识一个渠道
+     *
+     * http://tech.meituan.com/mt-apk-packaging.html  参考网站
+     */
+    public static String getChannel(Context context) {
+        ApplicationInfo appinfo = context.getApplicationInfo();
+        String sourceDir = appinfo.sourceDir;
+        String ret = "";
+        ZipFile zipfile = null;
+        try {
+            zipfile = new ZipFile(sourceDir);
+            Enumeration<?> entries = zipfile.entries();
+            while (entries.hasMoreElements()) {
+                ZipEntry entry = ((ZipEntry) entries.nextElement());
+                String entryName = entry.getName();
+                //这里的"umengchannel"不能改 因为在打包工具里写死了是这个名字
+                if (entryName.contains("umengchannel")) {
+                    ret = entryName;
+                    break;
+                }
+            }
+        } catch (IOException e) {
+            e.printStackTrace();
+        } finally {
+            if (zipfile != null) {
+                try {
+                    zipfile.close();
+                } catch (IOException e) {
+                    e.printStackTrace();
+                }
+            }
+        }
+
+        String[] split = ret.split("_");
+        if (split != null && split.length >= 2) {
+            return ret.substring(split[0].length() + 1);
+
+        } else {
+            return "";
+        }
+    }
+</code>
